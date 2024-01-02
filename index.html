@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <title>AI DJ WEB APP</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+    
+      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    
+      <link rel="stylesheet" type="text/css" href="style.css">
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+      <div class="div_volume">
+        <br>
+        <h3 class="btn btn-primary" id="volume">First p5.js project</h3>
+      </div>
+        <hr>
+        <div class="div_volume">
+            <br>
+            <h3 class="btn btn-success" id="volume">Take snapshot</h3>
+          </div>
+        <style>
+            .dot {
+            height: 80px;
+            width: 80px;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
+            }
+        </style>
+    </head>
+
+    <body>
+       
+        <script>
+            var canvas = document.getElementById('canvas');
+            var context = canvas.getContext('2d');
+            context.moveTo(60,60);
+            context.lineTo(700,60);
+            context.stroke();
+            
+            context.moveTo(60,60);
+            context.lineTo(60,450);
+            context.stroke();
+
+            context.moveTo(60,450);
+            context.lineTo(750,445);
+            context.stroke();
+
+            context.moveTo(740,450);
+            context.lineTo(740,100);
+            context.stroke();
+            var radius = 50;
+
+            context.beginPath();
+            context.arc(60, 60, radius, 0, 2 * Math.PI, false);
+            context.fillStyle = 'red';
+            context.fill();
+  
+            context.beginPath();
+            context.arc(740, 60, radius, 0, 2 * Math.PI, false);
+            context.fillStyle = 'red';
+            context.fill();
+
+            context.beginPath();
+            context.arc(60, 442, radius, 0, 2 * Math.PI, false);
+            context.fillStyle = 'red';
+            context.fill();
+
+            context.beginPath();
+            context.arc(740, 441, radius, 0, 2 * Math.PI, false);
+            context.fillStyle = 'red';
+            context.fill();
+
+            var canvas = document.getElementById('canvas');
+            var image = new Image();
+            image.src = 'google-logo.jpg';
+            image.onload = function () {
+                var canvasContext = canvas.getContext('2d');
+                canvasContext.drawImage(image,240,180, 300 , 150);
+      };
+            
+        </script> 
+    
+    <script src="main.js"></script>
+    </body>
+
+</html>
